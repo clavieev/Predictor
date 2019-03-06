@@ -104,6 +104,10 @@ void Robot::evolution()
   double thetadot;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f62f4498f824f5521ca6afa199fd2ff2da14010b
   xdot.at<double>(0) = x.at<double>(2)*cos((theta*PI/180)); + dx(generator);
   xdot.at<double>(1) = x.at<double>(2)*sin((theta*PI/180)); + dy(generator);
   xdot.at<double>(2) = u.at<double>(0) - x.at<double>(2); + dv(generator);
@@ -122,6 +126,10 @@ void Robot::evolution()
   //theta += dtheta(generator)
 
   cout<<"v ="<<v<<endl;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f62f4498f824f5521ca6afa199fd2ff2da14010b
   t+=dt;
 }
 
@@ -165,22 +173,22 @@ void Robot::draw(vector<point> *plot)
         }
     }
     norm = pow(norm,0.5);
-    //chat<<norm<<endl;
+    //cout<<norm<<endl;
     plot->push_back(point(t,norm));
 }
 
 void Robot::draw_x_y(vector<point>*plot)
 {
-  //chat<<"x="<<x.at<double>(0,0)<<"\n";
-  //chat<<"y="<<x.at<double>(1,0)<<"\n";
+  //cout<<"x="<<x.at<double>(0,0)<<"\n";
+  //cout<<"y="<<x.at<double>(1,0)<<"\n";
   plot->push_back(point(x_hat.at<double>(0,0), x_hat.at<double>(1,0)));
 }
 
 vector<point> Robot::draw_x_y()
 {
   vector<point> plot;
-  //chat<<"x="<<x.at<double>(0,0)<<"\n";
-  //chat<<"y="<<x.at<double>(1,0)<<"\n";
+  //cout<<"x="<<x.at<double>(0,0)<<"\n";
+  //cout<<"y="<<x.at<double>(1,0)<<"\n";
   plot.push_back(point(x.at<double>(0,0), x.at<double>(1,0)));
   return plot;
 }
