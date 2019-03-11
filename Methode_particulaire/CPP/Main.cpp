@@ -30,6 +30,7 @@ int main(int argc, char **argv){
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   gp << "set xrange [-5:180]\n";
   gp << "set yrange [-50:50]\n";
 
@@ -37,6 +38,10 @@ int main(int argc, char **argv){
   gp << "set xrange [-150:150]\n";
   gp << "set yrange [-150:150]\n";
 >>>>>>> 021d411b4fc73afbf1e60ef31ac542d64fdaf118
+=======
+  gp << "set xrange [-150:150]\n";
+  gp << "set yrange [-150:150]\n";
+>>>>>>> d994f5f6c66be9c4f1a0a67b9dbf69dac78e832f
   gp << "set ylabel \"y\"\n";
   gp << "set xlabel \"x\"\n";
   gp << "set linetype 1 linecolor rgb 'red'\n";
@@ -56,6 +61,7 @@ int main(int argc, char **argv){
         robot.Gbeta.at<double>(0,0) = pow(3,2);
         robot.Gbeta.at<double>(1,1) = pow(3,2);
 <<<<<<< HEAD
+<<<<<<< HEAD
         robot.theta_bar = 180.0;
         robot.A.at<double>(0,2) = 1*cos(robot.theta_bar*PI/180);
         robot.A.at<double>(1,2) = 1*sin(robot.theta_bar*PI/180);
@@ -64,11 +70,17 @@ int main(int argc, char **argv){
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> d994f5f6c66be9c4f1a0a67b9dbf69dac78e832f
         robot.y.at<double>(0) = robot.x.at<double>(0,0);
         robot.y.at<double>(1) = robot.x.at<double>(1);
 >>>>>>> baf47e63e23aa99a852ebed8e23f6ac36b4d382c
         robot.theta_mission = 180.0;
+<<<<<<< HEAD
 >>>>>>> 021d411b4fc73afbf1e60ef31ac542d64fdaf118
+=======
+
+>>>>>>> d994f5f6c66be9c4f1a0a67b9dbf69dac78e832f
       }
       robot.P_theta(); //Proportionnel pour
       robot.kalman_x(&robot.Gx_hat, &robot.x_hat);

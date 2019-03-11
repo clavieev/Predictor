@@ -101,6 +101,7 @@ void Robot::evolution()
   normal_distribution<> dy(0,Galpha.at<double>(1,1));
   normal_distribution<> dv(0,Galpha.at<double>(2,2));
   Mat xdot = Mat::zeros(3, 1, CV_64F);
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -108,19 +109,28 @@ void Robot::evolution()
 
 <<<<<<< HEAD
 >>>>>>> f62f4498f824f5521ca6afa199fd2ff2da14010b
+=======
+>>>>>>> d994f5f6c66be9c4f1a0a67b9dbf69dac78e832f
   xdot.at<double>(0) = x.at<double>(2)*cos((theta*PI/180)); + dx(generator);
   xdot.at<double>(1) = x.at<double>(2)*sin((theta*PI/180)); + dy(generator);
   xdot.at<double>(2) = u.at<double>(0) - x.at<double>(2); + dv(generator);
   cout<<"thetadot ="<<theta_dot<<endl;
   //cout<<Gx_hat.at<double>(2,2)<<endl;
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> d994f5f6c66be9c4f1a0a67b9dbf69dac78e832f
 
   xdot.at<double>(0) = x.at<double>(2)*cos((theta*PI/180)) + dx(generator);
   xdot.at<double>(1) = x.at<double>(2)*sin((theta*PI/180)) + dy(generator);
   xdot.at<double>(2) = u.at<double>(0) - x.at<double>(2) + dv(generator);
   //cout<<"thetadot ="<<theta_dot<<endl;
   //cout<<dx(generator)<<endl;
+<<<<<<< HEAD
 >>>>>>> 021d411b4fc73afbf1e60ef31ac542d64fdaf118
+=======
+>>>>>>> d994f5f6c66be9c4f1a0a67b9dbf69dac78e832f
   x += dt*xdot;
   theta += dt*theta_dot;
   if (theta>360)
@@ -132,14 +142,17 @@ void Robot::evolution()
   //theta += dtheta(generator)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   cout<<"v ="<<v<<endl;
 <<<<<<< HEAD
 =======
 =======
   //cout<<"v ="<<x_hat.at<double>(2)<<endl;
 >>>>>>> 021d411b4fc73afbf1e60ef31ac542d64fdaf118
+=======
+  //cout<<"v ="<<x_hat.at<double>(2)<<endl;
+>>>>>>> d994f5f6c66be9c4f1a0a67b9dbf69dac78e832f
 
->>>>>>> f62f4498f824f5521ca6afa199fd2ff2da14010b
   t+=dt;
 }
 
